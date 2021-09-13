@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.blog_app_flutter">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="blog_app_flutter"
         android:icon="@mipmap/ic_launcher">
@@ -30,6 +31,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.
