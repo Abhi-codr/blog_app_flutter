@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+  static const route = "/";
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       loading = true;
     });
-    final data = await NetworkHelper(url: "/posts").getData();
+    final data = await NetworkHelper().getPosts();
     setState(() {
       blogs = data["data"];
       loading = false;

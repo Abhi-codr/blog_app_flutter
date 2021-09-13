@@ -1,6 +1,6 @@
+import 'package:blog_app_flutter/screens/post_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:date_format/date_format.dart';
 
 class BlogWidget extends StatelessWidget {
   final Map blog;
@@ -15,13 +15,19 @@ class BlogWidget extends StatelessWidget {
         elevation: 5,
         child: InkWell(
           onTap: () {
-            print(blog["_id"]);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => PostScreen(id: blog["_id"])));
           },
           child: Column(
             children: [
-              Image.network(
-                "https://c4.wallpaperflare.com/wallpaper/826/524/865/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg",
-                fit: BoxFit.contain,
+              Hero(
+                tag: blog["_id"],
+                child: Image.network(
+                  "https://c4.wallpaperflare.com/wallpaper/826/524/865/3-316-16-9-aspect-ratio-s-sfw-wallpaper-preview.jpg",
+                  fit: BoxFit.contain,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),

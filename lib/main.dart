@@ -1,4 +1,5 @@
 import 'package:blog_app_flutter/screens/home_screen.dart';
+import 'package:blog_app_flutter/screens/post_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
