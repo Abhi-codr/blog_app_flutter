@@ -1,3 +1,4 @@
+import 'package:blog_app_flutter/screens/new_post_screen.dart';
 import 'package:blog_app_flutter/services/networking.dart';
 import 'package:blog_app_flutter/widgets/blog_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,7 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.redAccent,
         onPressed: () {
-          print("FAB clicked");
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const NewPostScreen()));
         },
         child: const Icon(Icons.add),
       ),
