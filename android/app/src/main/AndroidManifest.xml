@@ -2,7 +2,7 @@
     package="com.example.blog_app_flutter">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="blog_app_flutter"
+        android:label="Blog App"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
